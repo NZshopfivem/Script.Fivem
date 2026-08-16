@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement — FiveM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="shop-header">
+    <div class="shop-logo">SCRIPT<span class="dot">.</span>SHOP</div>
+    <a href="fivem-app.html" class="back-link">← Retour au script</a>
+  </header>
+
+  <main class="pay-wrap">
+
+    <a href="fivem-app.html" class="pay-back">← Annuler</a>
+
+    <h1>Finaliser l'achat</h1>
+
+    <div class="pay-summary">
+      <div class="item-name">
+        FiveM
+        <span>Achat unique — livraison par Discord</span>
+      </div>
+      <div class="item-price">5 €</div>
+    </div>
+
+    <button class="pay-method-btn paypal" id="paypalBtn" type="button">
+      Payer avec PayPal
+    </button>
+
+    <button class="pay-method-btn card" id="cardBtn" type="button">
+      Payer par carte
+    </button>
+
+    <p class="pay-secure-note">
+      En cliquant, tu es redirigé vers un espace de paiement sécurisé
+      (PayPal ou Stripe) pour finaliser ton achat.
+    </p>
+
+  </main>
+
+  <script>
+    document.getElementById('paypalBtn').addEventListener('click', () => {
+      window.location.href = "https://paypal.me/NZshopscriptfivem/5";
+    });
+
+    document.getElementById('cardBtn').addEventListener('click', () => {
+      window.location.href = "https://buy.stripe.com/7sYaEQ1fF8mj5o634q8g004";
+    });
+  </script>
+
+</body>
+</html>
