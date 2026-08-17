@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement — Vente Demande (3 mois)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="shop-header">
+    <div class="shop-logo">SCRIPT<span class="dot">.</span>SHOP</div>
+    <a href="tableau-staff.html" class="back-link">← Retour au script</a>
+  </header>
+
+  <main class="pay-wrap">
+
+    <a href="tableau-staff.html" class="pay-back">← Annuler</a>
+
+    <h1>Finaliser l'achat</h1>
+
+    <div class="pay-summary">
+      <div class="item-name">
+        Vente Demande — 3 mois
+        <span>Livraison par Discord après achat</span>
+      </div>
+      <div class="item-price">13,50 €</div>
+    </div>
+
+    <button class="pay-method-btn paypal" id="paypalBtn" type="button">
+      Payer avec PayPal
+    </button>
+
+    <!--
+      IMPORTANT : crée un lien Stripe Payment Link à 13,50€ dans ton
+      dashboard Stripe (dashboard.stripe.com > Payment links) et
+      colle-le ici à la place.
+    -->
+    <button class="pay-method-btn card" id="cardBtn" type="button">
+      Payer par carte
+    </button>
+
+    <p class="pay-secure-note">
+      En cliquant, tu es redirigé vers un espace de paiement sécurisé
+      (PayPal ou Stripe) pour finaliser ton achat.
+    </p>
+
+  </main>
+
+  <script>
+    document.getElementById('paypalBtn').addEventListener('click', () => {
+      window.location.href = "https://paypal.me/NZshopscriptfivem/13.50";
+    });
+
+    document.getElementById('cardBtn').addEventListener('click', () => {
+      window.location.href = "https://buy.stripe.com/4gMfZa6zZ7ifaIq0Wi8g009";
+    });
+  </script>
+
+</body>
+</html>
