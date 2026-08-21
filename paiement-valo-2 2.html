@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paiement — Compte Valorant 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="shop-header">
+    <div class="shop-logo">SCRIPT<span class="dot">.</span>SHOP</div>
+    <a href="compte-valo.html" class="back-link">← Retour au script</a>
+  </header>
+
+  <main class="pay-wrap">
+
+    <a href="compte-valo.html" class="pay-back">← Annuler</a>
+
+    <h1>Finaliser l'achat</h1>
+
+    <!-- La photo s'affiche automatiquement dès que tu uploades un fichier nommé exactement valo-2-photo.jpg dans le repo -->
+    <div class="pay-photo" onclick="document.getElementById('lightboxImg').src=this.querySelector('img').src; document.getElementById('lightbox').classList.add('show');">
+      <img src="valo-2-photo.jpg" alt="Aperçu Compte Valorant 2" onerror="this.style.display='none'; this.parentElement.querySelector('.pay-photo-placeholder-text').style.display='flex';" />
+      <span class="pay-photo-placeholder-text">Photo à venir — uploade valo-2-photo.jpg dans le repo</span>
+    </div>
+
+    <div class="pay-summary">
+      <div class="item-name">
+        Compte Valorant 2
+        <span>Livraison par Discord après achat</span>
+      </div>
+      <div class="item-price">20 €</div>
+    </div>
+
+    <button class="pay-method-btn paypal" id="paypalBtn" type="button">
+      Payer avec PayPal
+    </button>
+
+    <!-- Remplace ce lien par ton vrai lien de paiement Stripe pour Compte Valorant 2 -->
+    <a href="#" class="pay-method-btn card">
+      Payer par carte
+    </a>
+
+    <p class="pay-secure-note">
+      En cliquant, tu es redirigé vers un espace de paiement sécurisé (PayPal ou Stripe) pour finaliser ton achat.
+    </p>
+
+  </main>
+
+  <script>
+    // Remplace ce lien par ton vrai lien PayPal Business (bouton dédié ou paypal.me) pour Compte Valorant 2.
+    document.getElementById('paypalBtn').addEventListener('click', () => {
+      window.location.href = "https://paypal.me/NZshopscriptfivem/20";
+    });
+  </script>
+
+
+  <div class="lightbox-overlay" id="lightbox" onclick="this.classList.remove('show')">
+    <img id="lightboxImg" src="" alt="Aperçu agrandi" />
+  </div>
+
+</body>
+</html>
